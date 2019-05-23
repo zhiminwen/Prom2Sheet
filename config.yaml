@@ -1,0 +1,48 @@
+---
+sheets:
+- name: CPU Requests
+  query: kube_pod_container_resource_requests_cpu_cores
+  columns:
+    - name: Env
+      type: OS.Environment
+      value: P_ENV
+    - name: Timestamp
+      type: Prometheus.Timestamp
+    - name: Namespace
+      type: Prometheus.Metric
+      value: namespace
+    - name: Pod
+      type: Prometheus.Metric
+      value: pod
+    - name: Container
+      type: Prometheus.Metric
+      value: container
+    - name: Node
+      type: Prometheus.Metric
+      value: node
+    - name: CPU Requests
+      type: Prometheus.Value
+
+- name: Memory Requests
+  query: kube_pod_container_resource_requests_memory_bytes
+  columns:
+    - name: Env
+      type: OS.Environment
+      value: P_ENV
+    - name: Timestamp
+      type: Prometheus.Timestamp
+    - name: Namespace
+      type: Prometheus.Metric
+      value: namespace
+    - name: Pod
+      type: Prometheus.Metric
+      value: pod
+    - name: Container
+      type: Prometheus.Metric
+      value: container
+    - name: Node
+      type: Prometheus.Metric
+      value: node
+    - name: Memory Requests
+      type: Prometheus.Value
+  
